@@ -1,0 +1,14 @@
+{
+    "name": "horus.cristian/pao-e-circo",
+    "description": "projeto mvc dao php",
+    "authors": [
+        {
+            "name": "Horus Cristian",
+            "email": "horus.cristian@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "monolog/monolog": "^3.2"
+    }
+}
