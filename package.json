@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/HorusCSB/projeto-arq-soft-2022/issues"
   },
-  "homepage": "https://github.com/HorusCSB/projeto-arq-soft-2022#readme"
+  "homepage": "https://github.com/HorusCSB/projeto-arq-soft-2022#readme",
+  "dependencies": {
+    "jquery": "^3.6.1"
+  }
 }
