@@ -1,0 +1,78 @@
+<link rel="stylesheet" href="./estilos/create-account-page.css">
+<script>
+    function show(option) {
+        if (option === "fisica") {
+            fisica.appendTo('#appendable')
+        } else if (option === "juridica") {
+            juridica.appendTo('#appendable')
+        }
+
+        $(".card-option").hide();
+    }
+
+    function validateForm() {
+        const formData = $('form').serializeArray();
+        let senha1 = "";
+        let valid = true;
+        formData.forEach(data => {
+            if(data.name == 'senha') {
+                senha1 = data.value
+            }
+            if(data.name == 'confirme' && data.value != senha1) {
+                valid = false;
+                alert("as senhas devem ser iguais!")
+            }
+        });
+        let formJson = $('form').formToJson()
+        delete formJson.confirme
+        if(valid) {
+            alert("cadastro salvo com sucesso, seja bem vindo!");
+            let accounts = getAccounts()
+            formJson.id = accounts.length + 1;
+            accounts.push(formJson)
+            setAccounts(accounts)
+            validLogin(formJson.id)
+        }
+        return false;
+    }
+
+    function alertErrors(alertObject) {
+
+    }
+    var fisica = null
+    var juridica = null
+    var button = null
+    $(document).ready(() => {
+        fisica = $('#fisica').detach();
+        juridica = $('#juridica').detach();
+
+    })
+</script>
+<div id="create-account-page">
+    <div id="appendable" class="card">
+        <div class="card-option">
+            Escolha a opção de cadastro:
+            <button onclick="show('fisica')">Pessoa física</button>
+            <button onclick="show('juridica')">Pessoa jurídica</button>
+        </div>
+        <form id="fisica" onsubmit="return validateForm()">
+            <input name="nome_completo" type="text" placeholder="nome completo" required>
+            <input name="data_nascimento" type="date" placeholder="data de nascimento" required>
+            <input name="endereco" type="text" placeholder="endereco" required>
+            <input name="email" type="email" placeholder="email" required>
+            <input name="senha" type="password" placeholder="senha" required>
+            <input name="confirme" type="password" placeholder="confirme sua senha" required>
+            <button>confirmar</button>
+        </form>
+        <form id="juridica" onsubmit="return validateForm()">
+            <input name="nome_empresa" type="text" placeholder="nome da empresa" required>
+            <input name="CNPJ" type="text" placeholder="CNPJ" required>
+            <input name="razao" type="text" placeholder="razão social" required>
+            <input name="endereco" type="text" placeholder="endereço" required>
+            <input name="email" type="email" placeholder="email" required>
+            <input name="senha" type="password" placeholder="senha" required>
+            <input name="confirme" type="password" placeholder="confirme sua senha" required>
+            <button>confirmar</button>
+        </form>
+    </div>
+</div>
