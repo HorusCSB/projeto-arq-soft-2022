@@ -1,0 +1,21 @@
+div#login-page {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid gray;
+    padding:15px;
+    width: 400px;
+}
+.card-content {
+    display: flex;
+    flex-direction: column;
+    padding:15px;
+}
+

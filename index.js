@@ -1,4 +1,4 @@
-$(document).ready(() => {
-    console.log("a");
-    $("#corpo").append($("#login-page").html);
+$(document).ready(function() {
+    console.log($("#login-page").html);
+    $("#corpo").load("./pages/login-page/login-page.html"); 
 });
