@@ -14,7 +14,7 @@ function login() {
         userObject.page = "home-page"
         setUser(userObject)
         changeNavConfig('logged')
-        loadPage('home')
+        loadPage(userObject.page)
     } else {
         alert("conta de usuário inexistente!!")
     }
