@@ -1,4 +1,4 @@
-#destaque-page {
+#avaliar-denuncia-page {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -26,6 +26,18 @@
     margin-bottom: 15px;
 }
 
-#dados-cartao {
-    margin-top: 15px;
+.img-anuncios {
+    width:100px;
+    height:100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+p {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+  }
