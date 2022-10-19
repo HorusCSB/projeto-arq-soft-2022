@@ -76,7 +76,7 @@ $(document).ready(function () {
     if (getAccounts() === null) {
         setAccounts([{
             id: 1,
-            tipo: "fisica",
+            tipo: "admin",
             nome_completo: "horus",
             data_nascimento: "09/12/1999",
             endereco: "",
