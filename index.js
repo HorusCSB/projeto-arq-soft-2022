@@ -60,11 +60,15 @@ function changeNavConfig(type) {
         $("#nav-gerenciar-perfil").show()
         $("#nav-create-account").hide()
         $("#nav-login").hide()
+        $("#nav-click").show()
+        $("#nav-rate").show()
     } else {
         $("#nav-exit").hide()
         $("#nav-gerenciar-perfil").hide()
         $("#nav-create-account").show()
         $("#nav-login").show()
+        $("#nav-click").hide()
+        $("#nav-rate").hide()
     }
 }
 
