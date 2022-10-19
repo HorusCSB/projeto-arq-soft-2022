@@ -6,6 +6,12 @@ function getUser() {
     return JSON.parse(localStorage.getItem('user'))
 }
 
+function getUserById(id) {
+    return JSON.parse(localStorage.getItem('accounts')).filter(account => {
+        return account.id == id
+    })[0]
+}
+
 function setAccounts(accounts) {
     localStorage.setItem('accounts', JSON.stringify(accounts))
 }
@@ -22,7 +28,6 @@ function login() {
         }
     })
     if (loginObj.id) {
-        alert("login efetuado com sucesso!")
         validLogin(loginObj.id)
     } else {
         alert("conta de usuário inexistente!!")
@@ -33,7 +38,7 @@ function validLogin(id) {
     let userObject = getUser()
     userObject.loggedIn = true
     userObject.id = id
-    userObject.page = "home-page"
+    userObject.page = "gerenciar-perfil-page"
     setUser(userObject)
     changeNavConfig('logged')
     loadPage(userObject.page)
@@ -52,10 +57,12 @@ function logout() {
 function changeNavConfig(type) {
     if (type == 'logged') {
         $("#nav-exit").show()
+        $("#nav-gerenciar-perfil").show()
         $("#nav-create-account").hide()
         $("#nav-login").hide()
     } else {
         $("#nav-exit").hide()
+        $("#nav-gerenciar-perfil").hide()
         $("#nav-create-account").show()
         $("#nav-login").show()
     }
