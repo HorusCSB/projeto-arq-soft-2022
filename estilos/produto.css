@@ -1,0 +1,84 @@
+section#corpo {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    width: 65%;
+    height: 460px;
+}
+
+aside#lateral {
+    float: left;
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 30%;
+    background-color: #DCDCDC;
+    border-radius: 10px;
+}
+
+h3, p {
+    text-align: center;
+}
+
+div#anunciofoto img {
+    width: 250px;
+    height: 350 px;
+}
+
+div#estvalor {
+    border: 1px;
+    width: 90%;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: gray;
+}
+
+div#titulo{
+    border-radius: 10px;
+    background-color: #DCDCDC;
+}
+
+div#boxprod {
+    background-color: #DCDCDC;
+    border-radius: 10px;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+}
+
+div#whitebox {
+    background-color: white;
+    width: 95%;
+    height: 300px;
+    margin: 10px;
+    height: 100px;
+}
+
+div#escolha img {
+    width: 75px;
+    height: 75px;
+}
+
+div#btn{
+    margin: 10px;
+}
+
+div#btncom{
+    margin: 10px;
+}
+
+div#coment{
+    background-color: white;
+    margin: 10px;
+}
+
+table#bordatb {
+    width: 100%;
+    border: 1px solid;
+}
+
+table#bordatb tr {
+    width: 100%;
+    border-bottom: 1px solid;
+}

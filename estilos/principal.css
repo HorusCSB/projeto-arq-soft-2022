@@ -1,0 +1,53 @@
+body {
+	background-color: #DAA520;
+	color: rgba(0,0,0,1);
+}
+
+div#interface {
+	width: 75%;
+	background-color: white;
+	margin: -20px auto 0px auto;
+	box-shadow: 0px 0px 10px rgba(0,0,0,.5);
+	padding: 10px 10px 10px 10px;
+	border-radius: 10px;
+}
+
+header#cabecalho {
+	border-bottom: 1px solid #DCDCDC;
+    background-color: #DCDCDC;
+	height: 75px;
+}
+
+header#cabecalho table#cab{
+    width: 750px;
+}
+
+table#cab tr td a {
+	color: darkgray;
+	text-decoration: none;
+}
+
+.logo {
+    max-width: 75px;
+    height: 75px;
+}
+
+section#corpo {
+	display: block;
+	width: 600px;
+	float: right;
+	padding-right: 20px;
+	padding-left: 20px;
+    background-color: white;
+}
+
+footer#rodape {
+	clear: both;
+	border-top: 1px solid #606060;
+    background-color: red;
+    margin: 0px;
+}
+
+footer#rodape p {
+	text-align: center;
+}
