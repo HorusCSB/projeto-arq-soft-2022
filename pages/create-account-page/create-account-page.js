@@ -1,8 +1,10 @@
     function show(option) {
         if (option === "fisica") {
             fisica.appendTo('#appendable')
+            tipo = 'fisica'
         } else if (option === "juridica") {
             juridica.appendTo('#appendable')
+            tipo = 'juridica'
         }
 
         $(".card-option").hide();
@@ -31,6 +33,7 @@
         if(valid) {
             alert("cadastro salvo com sucesso, seja bem vindo!");
             formJson.id = accounts.length + 1;
+            formJson.tipo = tipo
             accounts.push(formJson)
             setAccounts(accounts)
             validLogin(formJson.id)
@@ -38,12 +41,9 @@
         return false
     }
 
-    function alertErrors(alertObject) {
-
-    }
     var fisica = null
     var juridica = null
-    var button = null
+    var tipo = null
     $(document).ready(() => {
         fisica = $('#fisica').detach();
         juridica = $('#juridica').detach();
