@@ -62,6 +62,8 @@ function changeNavConfig(type) {
         $("#nav-login").hide()
         $("#nav-click").show()
         $("#nav-rate").show()
+        $("#nav-anuncie-page").show()
+        
     } else {
         $("#nav-exit").hide()
         $("#nav-gerenciar-perfil").hide()
@@ -69,6 +71,7 @@ function changeNavConfig(type) {
         $("#nav-login").show()
         $("#nav-click").hide()
         $("#nav-rate").hide()
+        $("#nav-anuncie-page").hide()
     }
 }
 
