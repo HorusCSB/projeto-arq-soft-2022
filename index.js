@@ -61,14 +61,29 @@ function changeNavConfig(type) {
         $("#nav-create-account").hide()
         $("#nav-login").hide()
         $("#nav-click").show()
+        $("#nav-anuncie").show()
+        $("#nav-rate").hide()
+        $("#nav-propagandas").hide()
+        $("#nav-denuncias").hide()
+    } else if (type == 'loggedAsAdmin') {
+        $("#nav-exit").show()
+        $("#nav-gerenciar-perfil").hide()
+        $("#nav-create-account").hide()
+        $("#nav-login").hide()
+        $("#nav-anuncie").hide()
         $("#nav-rate").show()
-    } else {
+        $("#nav-propagandas").show()
+        $("#nav-show").hide()
+    } else if (type == 'offline'){
         $("#nav-exit").hide()
         $("#nav-gerenciar-perfil").hide()
         $("#nav-create-account").show()
         $("#nav-login").show()
         $("#nav-click").hide()
+        $("#nav-anuncie").show()
         $("#nav-rate").hide()
+        $("#nav-propagandas").hide()
+        $("#nav-denuncias").hide()
     }
 }
 
@@ -104,7 +119,13 @@ $(document).ready(function () {
         setUser(userObject)
         loadPage(userObject.page)
     } else {
-        changeNavConfig('logged')
+        var userData = getUserById(getUser().id)
+        if (userData.tipo == "admin") {
+            changeNavConfig('loggedAsAdmin')    
+            userObject.page = "avaliar-denuncia-page"
+        } else {
+            changeNavConfig('logged')
+        }        
         $("#nav-exit").show()
         loadPage(userObject.page)
     }
