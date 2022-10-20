@@ -1,0 +1,27 @@
+div#rate-user-page {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.buttons {
+    width: 200px;
+    margin: 0 auto;
+  }
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid gray;
+    padding:15px;
+    width: 400px;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    padding:15px;
+}
+

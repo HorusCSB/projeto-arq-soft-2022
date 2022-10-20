@@ -1,0 +1,43 @@
+#avaliar-denuncia-page {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid gray;
+    padding:15px;
+    width: 400px;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    padding:15px;
+}
+
+.buttons {
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.img-anuncios {
+    width:100px;
+    height:100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+  }
